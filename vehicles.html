@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse available rental vehicles at SwiftDrive Rentals.">
+    <title>Vehicles | SwiftDrive Rentals</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vehicles.css">
+    <script src="cript.js" defer></script>
+    <script src="vehicles.js" defer></script>
+    <link rel="stylesheet" href="vehicles.css">
+    <script src="vehicles.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Swift<span>Drive</span>
+                <small>RENTALS</small>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="vehicles.html" class="active">Vehicles</a>
+                <a href="about.html">About Us</a>
+                <a href="rental-terms.html">Rental Terms</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="login-link">Login</a>
+                <a href="register.html" class="btn btn-small">Register</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Page Heading -->
+        <section class="vehicles-hero">
+            <div class="container">
+                <p class="eyebrow">OUR VEHICLES</p>
+                <h1>Find Your Perfect Vehicle</h1>
+                <p>
+                    Browse our vehicle collection and choose a vehicle
+                    for your next journey in Sri Lanka.
+                </p>
+            </div>
+        </section>
+
+        <!-- Search and Filter -->
+        <section class="section vehicles-section">
+            <div class="container">
+
+                <div class="vehicle-filter">
+
+                    <div class="form-group">
+                        <label for="vehicleSearch">Search Vehicle</label>
+                        <input type="text" id="vehicleSearch"
+                               placeholder="Enter vehicle name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicleTypeFilter">Vehicle Category</label>
+                        <select id="vehicleTypeFilter">
+                            <option value="all">All Vehicles</option>
+                            <option value="economy">Economy Cars</option>
+                            <option value="suv">SUVs</option>
+                            <option value="van">Vans</option>
+                            <option value="luxury">Luxury Cars</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn"
+                            id="filterButton">
+                        Search
+                    </button>
+
+                </div>
+
+                <div class="vehicle-list-heading">
+                    <div>
+                        <p class="eyebrow">EXPLORE OUR FLEET</p>
+                        <h2>Available Vehicles</h2>
+                    </div>
+                    <p id="vehicleCount">6 vehicles</p>
+                </div>
+
+                <!-- Vehicle Cards -->
+                <div class="vehicle-grid" id="vehicleGrid">
+
+                    <article class="vehicle-card"
+                             data-name="Toyota Vitz"
+                             data-type="economy">
+
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80"
+                             alt="Toyota Vitz rental car">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">Economy</span>
+                            <h3>Toyota Vitz</h3>
+                            <p>Compact and comfortable for city travel.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 4 Seats</span>
+                                <span>⚙ Automatic</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 8,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=vitz"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=vitz"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card"
+                             data-name="Toyota Axio"
+                             data-type="economy">
+
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80"
+                             alt="Toyota Axio rental car">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">Economy</span>
+                            <h3>Toyota Axio</h3>
+                            <p>A practical choice for everyday journeys.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 5 Seats</span>
+                                <span>⚙ Automatic</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 10,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=axio"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=axio"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card"
+                             data-name="Toyota Prius"
+                             data-type="economy">
+
+                        <img src="https://images.unsplash.com/photo-1552519507-88aa2dfa9fdb?auto=format&fit=crop&w=800&q=80"
+                             alt="Toyota Prius rental car">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">Economy</span>
+                            <h3>Toyota Prius</h3>
+                            <p>A comfortable car for longer trips.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 5 Seats</span>
+                                <span>⚙ Automatic</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 12,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=prius"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=prius"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card"
+                             data-name="Toyota Raize"
+                             data-type="suv">
+
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80"
+                             alt="SUV rental vehicle">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">SUV</span>
+                            <h3>Toyota Raize</h3>
+                            <p>Extra space for comfortable family travel.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 5 Seats</span>
+                                <span>⚙ Automatic</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 15,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=raize"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=raize"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card"
+                             data-name="Toyota Hiace"
+                             data-type="van">
+
+                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=80"
+                             alt="Van rental vehicle">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">Van</span>
+                            <h3>Toyota Hiace</h3>
+                            <p>A useful option for groups and families.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 9 Seats</span>
+                                <span>⚙ Manual</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 18,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=hiace"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=hiace"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="vehicle-card"
+                             data-name="BMW 3 Series"
+                             data-type="luxury">
+
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80"
+                             alt="Luxury BMW rental car">
+
+                        <div class="vehicle-card-content">
+                            <span class="vehicle-category">Luxury</span>
+                            <h3>BMW 3 Series</h3>
+                            <p>Enjoy a premium driving experience.</p>
+
+                            <div class="vehicle-info">
+                                <span>👤 5 Seats</span>
+                                <span>⚙ Automatic</span>
+                            </div>
+
+                            <div class="vehicle-price">
+                                <div>
+                                    <strong>Rs. 30,000</strong>
+                                    <small> / day</small>
+                                </div>
+                            </div>
+
+                            <div class="vehicle-buttons">
+                                <a href="vehicle-details.html?vehicle=bmw"
+                                   class="btn btn-outline-dark">View Details</a>
+                                <a href="booking.html?vehicle=bmw"
+                                   class="btn">Book Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <p id="noVehiclesMessage" class="no-vehicles" hidden>
+                    No vehicles found. Please try another search.
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    Swift<span>Drive</span>
+                    <small>RENTALS</small>
+                </a>
+                <p>Your journey, our commitment.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="rental-terms.html">Rental Terms</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            <p>&copy; <span id="currentYear"></span>
+                SwiftDrive Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+
+
+.about-hero {
+    min-height: 390px;
+    padding: 75px 20px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg,
+            rgba(15, 35, 53, 0.94),
+            rgba(15, 35, 53, 0.58)),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+    color: #ffffff;
+}
+
+.about-hero-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #2aa5f3;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.about-hero h1 {
+    max-width: 680px;
+    margin: 0 0 20px;
+    font-size: clamp(34px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.about-hero p {
+    max-width: 620px;
+    margin: 0 0 30px;
+    color: #e2e8f0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-primary-btn,
+.about-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.about-primary-btn {
+    background: #2aa5f3;
+    color: #ffffff;
+}
+
+.about-primary-btn:hover {
+    background: #1687d0;
+    transform: translateY(-2px);
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Introduction */
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.about-intro-image img {
+    display: block;
+    width: 100%;
+    min-height: 330px;
+    max-height: 440px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.about-intro-content h2,
+.section-heading h2 {
+    margin: 0 0 18px;
+    color: #172738;
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.about-intro-content p {
+    margin: 0 0 15px;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Mission and Vision */
+
+.mission-section {
+    padding: 65px 0;
+    background: #f1f5f9;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.mission-card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.mission-icon {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #e0f2fe;
+    border-radius: 12px;
+    font-size: 27px;
+}
+
+.mission-card h2 {
+    margin: 0 0 14px;
+    color: #172738;
+    font-size: 23px;
+}
+
+.mission-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Why Choose Us */
+
+.why-section {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.section-heading {
+    max-width: 680px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.benefit-card {
+    padding: 25px 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+}
+
+.benefit-icon {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+
+.benefit-card h3 {
+    margin: 0 0 12px;
+    color: #172738;
+    font-size: 17px;
+}
+
+.benefit-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Services */
+
+.services-section {
+    padding: 80px 0;
+    background: #f1f5f9;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.service-item {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.service-number {
+    display: inline-block;
+    margin-bottom: 22px;
+    color: #2aa5f3;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.service-item h3 {
+    margin: 0 0 12px;
+    color: #172738;
+    font-size: 19px;
+}
+
+.service-item p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Call to Action */
+
+.about-cta {
+    padding: 75px 20px;
+    background: #172738;
+    color: #ffffff;
+    text-align: center;
+}
+
+.about-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.about-cta h2 {
+    margin: 0 0 16px;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.about-cta p {
+    margin: 0 0 28px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.about-secondary-btn {
+    border: 1px solid #94a3b8;
+    color: #ffffff;
+}
+
+.about-secondary-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .about-intro {
+        gap: 30px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .about-hero {
+        min-height: 340px;
+        padding: 55px 20px;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .about-intro-image img {
+        min-height: 230px;
+    }
+
+    .about-intro-content h2,
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .mission-grid,
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-section,
+    .services-section {
+        padding: 50px 0;
+    }
+
+    .why-section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .mission-card {
+        padding: 25px;
+    }
+
+    .about-cta {
+        padding: 55px 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

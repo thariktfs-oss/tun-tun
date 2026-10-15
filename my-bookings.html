@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings | SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="my-bookings.css">
+
+    <script src="cript.js" defer></script>
+    <script src="my-bookings.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">SwiftDrive Rentals</a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="my-bookings.html" class="active">My Bookings</a></li>
+                <li><a href="profile.html">My Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bookings-page">
+        <div class="bookings-container">
+
+            <section class="bookings-heading">
+                <div>
+                    <h1>My Bookings</h1>
+                    <p>Manage your vehicle rentals and view booking details.</p>
+                </div>
+
+                <a href="vehicles.html" class="new-booking-btn">
+                    + Book a Vehicle
+                </a>
+            </section>
+
+            <section class="booking-summary">
+                <div class="summary-card">
+                    <span class="summary-icon">📋</span>
+                    <div>
+                        <p>Total Bookings</p>
+                        <h2 id="totalBookings">3</h2>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-icon">⏳</span>
+                    <div>
+                        <p>Pending</p>
+                        <h2 id="pendingBookings">1</h2>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-icon">✓</span>
+                    <div>
+                        <p>Confirmed</p>
+                        <h2 id="confirmedBookings">1</h2>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <span class="summary-icon">✔</span>
+                    <div>
+                        <p>Completed</p>
+                        <h2 id="completedBookings">1</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="booking-list-section">
+                <div class="booking-list-heading">
+                    <h2>Booking History</h2>
+
+                    <label class="filter-control">
+                        <span class="visually-hidden">Filter bookings</span>
+                        <select id="statusFilter">
+                            <option value="all">All Bookings</option>
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div id="bookingList" class="booking-list">
+
+                    <!-- Booking 1 -->
+                    <article class="booking-card" data-status="confirmed">
+                        <div class="booking-card-top">
+                            <div>
+                                <span class="booking-reference">Booking ID: SDR-1001</span>
+                                <h3>Toyota Axio</h3>
+                                <p class="vehicle-category">Sedan · Automatic</p>
+                            </div>
+
+                            <span class="status-badge confirmed">Confirmed</span>
+                        </div>
+
+                        <div class="booking-details">
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Date</span>
+                                <strong>20 October 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Return Date</span>
+                                <strong>23 October 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Location</span>
+                                <strong>Dambulla</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Estimated Total</span>
+                                <strong class="booking-price">LKR 24,000</strong>
+                            </div>
+                        </div>
+
+                        <div class="booking-card-footer">
+                            <span class="booking-note">Your booking is confirmed.</span>
+                            <button class="view-booking-btn"
+                                data-booking="SDR-1001" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Booking 2 -->
+                    <article class="booking-card" data-status="pending">
+                        <div class="booking-card-top">
+                            <div>
+                                <span class="booking-reference">Booking ID: SDR-1002</span>
+                                <h3>Suzuki Wagon R</h3>
+                                <p class="vehicle-category">Hatchback · Automatic</p>
+                            </div>
+
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+
+                        <div class="booking-details">
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Date</span>
+                                <strong>28 October 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Return Date</span>
+                                <strong>30 October 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Location</span>
+                                <strong>Kurunegala</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Estimated Total</span>
+                                <strong class="booking-price">LKR 12,000</strong>
+                            </div>
+                        </div>
+
+                        <div class="booking-card-footer">
+                            <span class="booking-note">Waiting for confirmation.</span>
+                            <button class="view-booking-btn"
+                                data-booking="SDR-1002" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Booking 3 -->
+                    <article class="booking-card" data-status="completed">
+                        <div class="booking-card-top">
+                            <div>
+                                <span class="booking-reference">Booking ID: SDR-1003</span>
+                                <h3>Honda Fit</h3>
+                                <p class="vehicle-category">Hatchback · Automatic</p>
+                            </div>
+
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+
+                        <div class="booking-details">
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Date</span>
+                                <strong>5 September 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Return Date</span>
+                                <strong>7 September 2026</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Pickup Location</span>
+                                <strong>Dambulla</strong>
+                            </div>
+
+                            <div class="booking-detail">
+                                <span class="detail-label">Final Total</span>
+                                <strong class="booking-price">LKR 16,000</strong>
+                            </div>
+                        </div>
+
+                        <div class="booking-card-footer">
+                            <span class="booking-note">Rental completed.</span>
+                            <button class="view-booking-btn"
+                                data-booking="SDR-1003" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div id="emptyBookings" class="empty-bookings" hidden>
+                    <div class="empty-icon">🚗</div>
+                    <h3>No bookings found</h3>
+                    <p>Try another filter or book a vehicle for your next trip.</p>
+                    <a href="vehicles.html" class="new-booking-btn">
+                        Browse Vehicles
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; <span id="currentYear"></span>
+            SwiftDrive Rentals. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>

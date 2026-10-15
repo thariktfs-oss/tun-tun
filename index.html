@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SwiftDrive Rentals - Find the right vehicle for your journey in Sri Lanka.">
+    <title>SwiftDrive Rentals | Home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="cript.js" defer></script>
+</head>
+
+<body>
+
+    
+    <header class="site-header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Swift<span>Drive</span>
+                <small>RENTALS</small>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="vehicles.html">Vehicles</a>
+                <a href="about.html">About Us</a>
+                <a href="rental-terms.html">Rental Terms</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="login-link">Login</a>
+                <a href="register.html" class="btn btn-small">Register</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        
+        <section class="hero">
+            <div class="container hero-content">
+
+                <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+
+                <h1>Find Your Perfect Ride</h1>
+
+                <p class="hero-description">
+                    Explore Sri Lanka with comfort and confidence.
+                    Choose a vehicle that suits your journey with SwiftDrive Rentals.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="vehicles.html" class="btn">Explore Vehicles</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="search-section">
+            <div class="container">
+
+                <div class="search-card">
+                    <div class="section-heading search-heading">
+                        <div>
+                            <p class="eyebrow">PLAN YOUR TRIP</p>
+                            <h2>Find Your Vehicle</h2>
+                        </div>
+                        <p>Enter your trip details to get started.</p>
+                    </div>
+
+                    <form id="vehicleSearchForm" class="search-form">
+
+                        <div class="form-group">
+                            <label for="pickupLocation">Pickup Location</label>
+                            <select id="pickupLocation" name="pickupLocation" required>
+                                <option value="">Select location</option>
+                                <option value="Negombo">Negombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Katunayake">Katunayake</option>
+                                <option value="Dambulla">Dambulla</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupDate">Pickup Date</label>
+                            <input type="date" id="pickupDate"
+                                   name="pickupDate" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="returnDate">Return Date</label>
+                            <input type="date" id="returnDate"
+                                   name="returnDate" required>
+                        </div>
+
+                        <button type="submit" class="btn search-button">
+                            Search Vehicles
+                        </button>
+
+                    </form>
+
+                    <p id="searchMessage" class="form-message" role="status"></p>
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">EXPLORE OUR FLEET</p>
+                        <h2>Choose Your Vehicle</h2>
+                    </div>
+                    <a href="vehicles.html" class="text-link">View All Vehicles →</a>
+                </div>
+
+                <div class="category-grid">
+
+                    <a href="vehicles.html?type=economy" class="category-card">
+                        <div class="category-icon">🚗</div>
+                        <h3>Economy Cars</h3>
+                        <p>Comfortable and affordable for everyday journeys.</p>
+                    </a>
+
+                    <a href="vehicles.html?type=suv" class="category-card">
+                        <div class="category-icon">🚙</div>
+                        <h3>SUVs</h3>
+                        <p>Extra space and comfort for family adventures.</p>
+                    </a>
+
+                    <a href="vehicles.html?type=van" class="category-card">
+                        <div class="category-icon">🚐</div>
+                        <h3>Vans</h3>
+                        <p>Convenient travel for groups and families.</p>
+                    </a>
+
+                    <a href="vehicles.html?type=luxury" class="category-card">
+                        <div class="category-icon">🏎️</div>
+                        <h3>Luxury Cars</h3>
+                        <p>Enjoy a premium experience on your journey.</p>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="section benefits-section">
+            <div class="container">
+
+                <div class="section-heading centered">
+                    <p class="eyebrow">WHY SWIFTDRIVE?</p>
+                    <h2>Make Every Journey Better</h2>
+                    <p>We aim to make vehicle rental simple and convenient.</p>
+                </div>
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+                        <div class="category-icon">✓</div>
+                        <h3>Vehicle Choices</h3>
+                        <p>Explore different vehicles to suit your travel needs.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="category-icon">◷</div>
+                        <h3>Easy Booking</h3>
+                        <p>Enter your travel dates and booking information easily.</p>
+                    </article>
+
+                    <article class="benefit-card">
+                        <div class="category-icon">♡</div>
+                        <h3>Customer Support</h3>
+                        <p>Contact our team when you need assistance.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        
+        <section class="cta-section">
+            <div class="container cta-content">
+                <div>
+                    <p class="eyebrow">READY TO TRAVEL?</p>
+                    <h2>Your Next Journey Starts With SwiftDrive</h2>
+                    <p>Explore our vehicle collection and plan your trip.</p>
+                </div>
+                <a href="vehicles.html" class="btn btn-light">Browse Vehicles</a>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="container footer-content">
+
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    Swift<span>Drive</span>
+                    <small>RENTALS</small>
+                </a>
+                <p>Your journey, our commitment.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="rental-terms.html">Rental Terms</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+        </div>
+
+        <div class="container copyright">
+            <p>&copy; <span id="currentYear"></span> SwiftDrive Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

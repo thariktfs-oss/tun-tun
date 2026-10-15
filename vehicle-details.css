@@ -1,0 +1,149 @@
+.details-heading {
+    background: #f1f5f9;
+    padding: 35px 0;
+}
+
+.details-heading p {
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.details-heading a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.details-heading h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.details-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.details-info h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.vehicle-tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.vehicle-price {
+    color: #2563eb;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.vehicle-price span {
+    color: #64748b;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.vehicle-specifications {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.vehicle-specifications div {
+    background: #f8fafc;
+    padding: 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+.vehicle-specifications strong,
+.vehicle-specifications span {
+    display: block;
+}
+
+.vehicle-specifications strong {
+    margin-bottom: 7px;
+    color: #334155;
+}
+
+.vehicle-specifications span {
+    color: #64748b;
+}
+
+.details-info .btn {
+    display: inline-block;
+    margin: 5px 8px 5px 0;
+    text-decoration: none;
+}
+
+.vehicle-description,
+.rental-information {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.vehicle-description h2,
+.rental-information h2 {
+    margin-bottom: 15px;
+}
+
+.rental-information ul {
+    padding-left: 22px;
+    line-height: 1.9;
+}
+
+.rental-information a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .details-image img {
+        height: 260px;
+    }
+
+    .details-heading h1 {
+        font-size: 26px;
+    }
+
+    .vehicle-specifications {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicle-specifications {
+        grid-template-columns: 1fr;
+    }
+
+    .details-info .btn {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}

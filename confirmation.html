@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Confirmation - SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="confirmation.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+
+                <h2 class="logo">SwiftDrive Rentals</h2>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vehicles.html">Vehicles</a></li>
+                    <li><a href="my-bookings.html">My Bookings</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Confirmation Content -->
+    <main class="container confirmation-page">
+
+        <section class="confirmation-box">
+
+            <div class="success-icon">&#10004;</div>
+
+            <h1>Booking Confirmed!</h1>
+
+            <p class="success-message">
+                Thank you for choosing SwiftDrive Rentals.
+                Your booking has been submitted successfully.
+            </p>
+
+            <div class="booking-number">
+                <h3>Booking Reference</h3>
+                <p id="bookingId">BK001</p>
+            </div>
+
+            <h2>Booking Details</h2>
+
+            <div class="booking-details">
+
+                <div class="detail-row">
+                    <span>Customer Name</span>
+                    <strong id="customerName">Customer Name</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Vehicle</span>
+                    <strong id="vehicleName">Selected Vehicle</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Pickup Date</span>
+                    <strong id="pickupDate">Not selected</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Return Date</span>
+                    <strong id="returnDate">Not selected</strong>
+                </div>
+
+                <div class="detail-row">
+                    <span>Booking Status</span>
+                    <strong class="pending-status">Pending Confirmation</strong>
+                </div>
+
+            </div>
+
+            <p class="confirmation-note">
+                Please keep your booking reference for future enquiries.
+            </p>
+
+            <div class="confirmation-buttons">
+                <a href="my-bookings.html" class="confirmation-button">
+                    My Bookings
+                </a>
+
+                <a href="index.html" class="home-button">
+                    Back to Home
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 SwiftDrive Rentals</p>
+        </div>
+    </footer>
+
+    <script src="confirmation.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Management | SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="staff-vehicles.css">
+
+    <script src="cript.js" defer></script>
+    <script src="staff-vehicles.js" defer></script>
+</head>
+<body class="vehicle-management-page">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                SwiftDrive<span> Rentals</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="staff-dashboard.html">Dashboard</a>
+                <a href="staff-vehicles.html" class="active">Vehicles</a>
+                <a href="admin-bookings.html">Bookings</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="login.html" class="btn btn-primary" id="logoutLink">
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <main class="vehicle-management-container">
+
+        <!-- Page Heading -->
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">STAFF WORKSPACE</p>
+                <h1>Vehicle Management</h1>
+                <p>
+                    View vehicle information and monitor the availability
+                    of the rental fleet.
+                </p>
+            </div>
+
+            <a href="staff-dashboard.html" class="back-link">
+                ← Back to Dashboard
+            </a>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="vehicle-stats">
+
+            <article class="vehicle-stat-card">
+                <div class="stat-symbol blue-symbol">🚘</div>
+                <div>
+                    <p>Total Vehicles</p>
+                    <h2 id="totalVehicles">8</h2>
+                </div>
+            </article>
+
+            <article class="vehicle-stat-card">
+                <div class="stat-symbol green-symbol">✓</div>
+                <div>
+                    <p>Available</p>
+                    <h2 id="availableVehicles">4</h2>
+                </div>
+            </article>
+
+            <article class="vehicle-stat-card">
+                <div class="stat-symbol orange-symbol">◷</div>
+                <div>
+                    <p>Rented</p>
+                    <h2 id="rentedVehicles">3</h2>
+                </div>
+            </article>
+
+            <article class="vehicle-stat-card">
+                <div class="stat-symbol red-symbol">⚙</div>
+                <div>
+                    <p>Maintenance</p>
+                    <h2 id="maintenanceVehicles">1</h2>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Vehicle List -->
+        <section class="vehicle-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>All Vehicles</h2>
+                    <p>Search and filter registered rental vehicles.</p>
+                </div>
+                <span class="vehicle-count" id="vehicleCount">8 vehicles</span>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="vehicle-toolbar">
+                <div class="search-box">
+                    <label for="vehicleSearch">Search Vehicles</label>
+                    <input
+                        type="search"
+                        id="vehicleSearch"
+                        placeholder="Search by name, ID or brand..."
+                    >
+                </div>
+
+                <div class="filter-box">
+                    <label for="categoryFilter">Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Hatchback">Hatchback</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Van">Van</option>
+                    </select>
+                </div>
+
+                <div class="filter-box">
+                    <label for="statusFilter">Availability</label>
+                    <select id="statusFilter">
+                        <option value="all">All Statuses</option>
+                        <option value="Available">Available</option>
+                        <option value="Rented">Rented</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+
+                <button type="button" id="resetFilters" class="reset-button">
+                    Reset
+                </button>
+            </div>
+
+            <!-- Vehicle Table -->
+            <div class="table-scroll">
+                <table class="vehicle-table">
+                    <thead>
+                        <tr>
+                            <th>Vehicle</th>
+                            <th>Vehicle ID</th>
+                            <th>Category</th>
+                            <th>Transmission</th>
+                            <th>Daily Rate</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="vehicleTableBody">
+
+                        <tr data-id="VH-001"
+                            data-name="Toyota Aqua"
+                            data-brand="Toyota"
+                            data-category="Hatchback"
+                            data-status="Available"
+                            data-transmission="Automatic"
+                            data-rate="8500">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=160&q=80"
+                                         alt="Toyota Aqua"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Toyota Aqua</strong>
+                                        <span>Toyota</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-001</td>
+                            <td>Hatchback</td>
+                            <td>Automatic</td>
+                            <td>LKR 8,500</td>
+                            <td><span class="vehicle-status available">Available</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-002"
+                            data-name="Toyota Axio"
+                            data-brand="Toyota"
+                            data-category="Sedan"
+                            data-status="Rented"
+                            data-transmission="Automatic"
+                            data-rate="10000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=160&q=80"
+                                         alt="Toyota Axio"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Toyota Axio</strong>
+                                        <span>Toyota</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-002</td>
+                            <td>Sedan</td>
+                            <td>Automatic</td>
+                            <td>LKR 10,000</td>
+                            <td><span class="vehicle-status rented">Rented</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-003"
+                            data-name="Suzuki Wagon R"
+                            data-brand="Suzuki"
+                            data-category="Hatchback"
+                            data-status="Available"
+                            data-transmission="Automatic"
+                            data-rate="7000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=160&q=80"
+                                         alt="Suzuki Wagon R"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Suzuki Wagon R</strong>
+                                        <span>Suzuki</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-003</td>
+                            <td>Hatchback</td>
+                            <td>Automatic</td>
+                            <td>LKR 7,000</td>
+                            <td><span class="vehicle-status available">Available</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-004"
+                            data-name="Honda Vezel"
+                            data-brand="Honda"
+                            data-category="SUV"
+                            data-status="Rented"
+                            data-transmission="Automatic"
+                            data-rate="15000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=160&q=80"
+                                         alt="Honda Vezel"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Honda Vezel</strong>
+                                        <span>Honda</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-004</td>
+                            <td>SUV</td>
+                            <td>Automatic</td>
+                            <td>LKR 15,000</td>
+                            <td><span class="vehicle-status rented">Rented</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-005"
+                            data-name="Toyota Prius"
+                            data-brand="Toyota"
+                            data-category="Sedan"
+                            data-status="Available"
+                            data-transmission="Automatic"
+                            data-rate="12000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=160&q=80"
+                                         alt="Toyota Prius"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Toyota Prius</strong>
+                                        <span>Toyota</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-005</td>
+                            <td>Sedan</td>
+                            <td>Automatic</td>
+                            <td>LKR 12,000</td>
+                            <td><span class="vehicle-status available">Available</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-006"
+                            data-name="Nissan X-Trail"
+                            data-brand="Nissan"
+                            data-category="SUV"
+                            data-status="Maintenance"
+                            data-transmission="Automatic"
+                            data-rate="18000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=160&q=80"
+                                         alt="Nissan X-Trail"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Nissan X-Trail</strong>
+                                        <span>Nissan</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-006</td>
+                            <td>SUV</td>
+                            <td>Automatic</td>
+                            <td>LKR 18,000</td>
+                            <td><span class="vehicle-status maintenance">Maintenance</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-007"
+                            data-name="Toyota Hiace"
+                            data-brand="Toyota"
+                            data-category="Van"
+                            data-status="Rented"
+                            data-transmission="Manual"
+                            data-rate="22000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1566933293069-b55c7f326dd4?auto=format&fit=crop&w=160&q=80"
+                                         alt="Toyota Hiace"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Toyota Hiace</strong>
+                                        <span>Toyota</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-007</td>
+                            <td>Van</td>
+                            <td>Manual</td>
+                            <td>LKR 22,000</td>
+                            <td><span class="vehicle-status rented">Rented</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                        <tr data-id="VH-008"
+                            data-name="Honda Fit"
+                            data-brand="Honda"
+                            data-category="Hatchback"
+                            data-status="Available"
+                            data-transmission="Automatic"
+                            data-rate="8000">
+                            <td>
+                                <div class="vehicle-name-cell">
+                                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=160&q=80"
+                                         alt="Honda Fit"
+                                         class="vehicle-thumbnail">
+                                    <div>
+                                        <strong>Honda Fit</strong>
+                                        <span>Honda</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>VH-008</td>
+                            <td>Hatchback</td>
+                            <td>Automatic</td>
+                            <td>LKR 8,000</td>
+                            <td><span class="vehicle-status available">Available</span></td>
+                            <td><button type="button" class="view-button">View</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <p id="emptyMessage" class="empty-message" hidden>
+                    No vehicles match your search.
+                </p>
+            </div>
+
+            <p class="sample-note">
+                Note: The vehicle records and rental rates on this page are
+                sample data for demonstration purposes.
+            </p>
+        </section>
+
+        <!-- Vehicle Details -->
+        <section class="vehicle-details-panel" id="vehicleDetails" hidden>
+            <div class="details-heading">
+                <div>
+                    <h2>Vehicle Details</h2>
+                    <p>Selected vehicle information</p>
+                </div>
+
+                <button type="button" id="closeDetails" class="close-button">
+                    Close
+                </button>
+            </div>
+
+            <div id="vehicleDetailsContent" class="details-content"></div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    SwiftDrive<span> Rentals</span>
+                </a>
+                <p>Your journey, our priority.</p>
+            </div>
+
+            <p class="copyright">
+                &copy; <span id="currentYear"></span> SwiftDrive Rentals.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

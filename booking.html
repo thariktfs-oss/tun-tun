@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Vehicle | SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="booking.css">
+
+    <script src="cript.js" defer></script>
+    <script src="booking.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SwiftDrive Rentals</a>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="vehicles.html">Vehicles</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html" class="nav-button">Login</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Booking Page Heading -->
+        <section class="booking-heading">
+            <div class="container">
+                <p>
+                    <a href="index.html">Home</a> /
+                    <a href="vehicles.html">Vehicles</a> /
+                    Booking
+                </p>
+
+                <h1>Book Your Vehicle</h1>
+
+                <p>Enter your details and select your rental dates.</p>
+            </div>
+        </section>
+
+        <!-- Booking Form -->
+        <section class="section">
+            <div class="container booking-layout">
+
+                <div class="booking-form-section">
+
+                    <h2>Booking Information</h2>
+
+                    <form id="bookingForm">
+
+                        <h3>Customer Details</h3>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName"
+                                   name="fullName" required>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email"
+                                       name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone"
+                                       name="phone" required>
+                            </div>
+
+                        </div>
+
+                        <h3>Vehicle Details</h3>
+
+                        <div class="form-group">
+                            <label for="vehicle">Select Vehicle</label>
+
+                            <select id="vehicle" name="vehicle" required>
+                                <option value="">Choose a vehicle</option>
+                                <option value="Toyota Corolla" data-price="8000">
+                                    Toyota Corolla - Rs. 8,000/day
+                                </option>
+                                <option value="Toyota Axio" data-price="10000">
+                                    Toyota Axio - Rs. 10,000/day
+                                </option>
+                                <option value="Toyota Prius" data-price="12000">
+                                    Toyota Prius - Rs. 12,000/day
+                                </option>
+                                <option value="Toyota Raize" data-price="15000">
+                                    Toyota Raize - Rs. 15,000/day
+                                </option>
+                                <option value="Toyota Hiace" data-price="18000">
+                                    Toyota Hiace - Rs. 18,000/day
+                                </option>
+                            </select>
+                        </div>
+
+                        <h3>Rental Details</h3>
+
+                        <div class="form-group">
+                            <label for="pickupLocation">Pick-up Location</label>
+                            <input type="text" id="pickupLocation"
+                                   name="pickupLocation" required>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="pickupDate">Pick-up Date</label>
+                                <input type="date" id="pickupDate"
+                                       name="pickupDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="returnDate">Return Date</label>
+                                <input type="date" id="returnDate"
+                                       name="returnDate" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Requirements</label>
+                            <textarea id="message" name="message"
+                                      rows="4"
+                                      placeholder="Enter any special requirements"></textarea>
+                        </div>
+
+                        <div class="booking-total">
+                            <p>Rental Duration:
+                                <strong id="rentalDays">0 days</strong>
+                            </p>
+
+                            <p>Estimated Total:
+                                <strong id="totalPrice">Rs. 0</strong>
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Confirm Booking
+                        </button>
+
+                        <a href="vehicles.html" class="btn btn-secondary">
+                            Cancel
+                        </a>
+
+                        <p id="bookingMessage" class="booking-message"
+                           role="status"></p>
+
+                    </form>
+                </div>
+
+                <!-- Booking Summary -->
+                <aside class="booking-summary">
+
+                    <h2>Booking Summary</h2>
+
+                    <p>Please check your information before submitting.</p>
+
+                    <hr>
+
+                    <p>Selected Vehicle</p>
+                    <strong id="summaryVehicle">Not selected</strong>
+
+                    <p>Daily Rental Price</p>
+                    <strong id="summaryPrice">Rs. 0</strong>
+
+                    <p>Rental Duration</p>
+                    <strong id="summaryDays">0 days</strong>
+
+                    <hr>
+
+                    <p>Estimated Total</p>
+                    <h2 id="summaryTotal">Rs. 0</h2>
+
+                    <p class="summary-note">
+                        The total shown is an estimate. Final charges and
+                        vehicle availability must be confirmed by the rental
+                        company.
+                    </p>
+
+                    <a href="rental-terms.html">Read Rental Terms</a>
+
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>
+                &copy; <span id="currentYear"></span>
+                SwiftDrive Rentals. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

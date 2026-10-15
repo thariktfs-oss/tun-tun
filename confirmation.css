@@ -1,0 +1,181 @@
+
+
+.confirmation-page {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+/* Confirmation Box */
+
+.confirmation-box {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Success Icon */
+
+.success-icon {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    margin: 0 auto 20px;
+    background-color: #d4edda;
+    color: #28a745;
+    border-radius: 50%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Headings */
+
+.confirmation-box h1 {
+    color: #172738;
+    margin-bottom: 15px;
+}
+
+.confirmation-box h2 {
+    color: #172738;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.success-message {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Booking Reference */
+
+.booking-number {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f2f6f9;
+    border-radius: 8px;
+}
+
+.booking-number h3 {
+    color: #172738;
+    margin-bottom: 10px;
+}
+
+.booking-number p {
+    color: #2aa5f3;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Booking Details */
+
+.booking-details {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span {
+    color: #555;
+}
+
+.detail-row strong {
+    color: #172738;
+    text-align: right;
+}
+
+/* Pending Status */
+
+.pending-status {
+    color: #b77900 !important;
+}
+
+/* Confirmation Note */
+
+.confirmation-note {
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Buttons */
+
+.confirmation-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.confirmation-button,
+.home-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.confirmation-button {
+    background-color: #2aa5f3;
+    color: white;
+}
+
+.confirmation-button:hover {
+    background-color: #172738;
+}
+
+.home-button {
+    background-color: #172738;
+    color: white;
+}
+
+.home-button:hover {
+    background-color: #2aa5f3;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    .confirmation-page {
+        padding-top: 20px;
+    }
+
+    .confirmation-box {
+        padding: 20px 15px;
+    }
+
+    .detail-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .detail-row strong {
+        text-align: left;
+    }
+
+    .confirmation-buttons {
+        flex-direction: column;
+    }
+
+    .confirmation-button,
+    .home-button {
+        text-align: center;
+    }
+}

@@ -1,0 +1,268 @@
+
+
+.profile-page {
+    min-height: 75vh;
+    padding: 45px 20px 60px;
+    background: #f1f5f9;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-heading {
+    margin-bottom: 28px;
+}
+
+.profile-heading h1 {
+    margin: 0 0 8px;
+    color: #172738;
+    font-size: 32px;
+}
+
+.profile-heading p {
+    margin: 0;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.profile-card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.05);
+}
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-avatar {
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2aa5f3;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.profile-user h2 {
+    margin: 0 0 6px;
+    color: #172738;
+    font-size: 23px;
+}
+
+.profile-user p {
+    margin: 0 0 10px;
+    color: #64748b;
+    overflow-wrap: anywhere;
+}
+
+.customer-badge {
+    display: inline-block;
+    padding: 5px 11px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-divider {
+    height: 1px;
+    margin: 28px 0;
+    background: #e2e8f0;
+}
+
+.profile-card form h3 {
+    margin: 0 0 22px;
+    color: #172738;
+    font-size: 20px;
+}
+
+.profile-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.profile-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.profile-field input {
+    width: 100%;
+    padding: 13px 14px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #172738;
+    font-size: 15px;
+    outline: none;
+}
+
+.profile-field input:focus {
+    border-color: #2aa5f3;
+    box-shadow: 0 0 0 3px rgba(42, 165, 243, 0.13);
+}
+
+.profile-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.save-btn {
+    border: 1px solid #2aa5f3;
+    background: #2aa5f3;
+    color: #ffffff;
+}
+
+.save-btn:hover {
+    background: #1687d0;
+}
+
+.cancel-btn {
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+}
+
+.cancel-btn:hover {
+    background: #f8fafc;
+}
+
+.profile-message {
+    margin: 16px 0 0;
+    text-align: right;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.profile-message.success {
+    color: #15803d;
+}
+
+.profile-message.error {
+    color: #dc2626;
+}
+
+.profile-shortcuts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.shortcut-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shortcut-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.shortcut-icon {
+    font-size: 27px;
+}
+
+.shortcut-card h3 {
+    margin: 0 0 6px;
+    color: #172738;
+    font-size: 16px;
+}
+
+.shortcut-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.shortcut-arrow {
+    margin-left: auto;
+    color: #2aa5f3;
+    font-size: 22px;
+}
+
+@media (max-width: 650px) {
+    .profile-page {
+        padding: 30px 15px 40px;
+    }
+
+    .profile-heading h1 {
+        font-size: 27px;
+    }
+
+    .profile-card {
+        padding: 22px 18px;
+    }
+
+    .profile-top {
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .profile-avatar {
+        width: 62px;
+        height: 62px;
+        font-size: 25px;
+    }
+
+    .profile-user h2 {
+        font-size: 19px;
+    }
+
+    .profile-form-grid,
+    .profile-shortcuts {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-actions {
+        flex-direction: column-reverse;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+
+    .profile-message {
+        text-align: left;
+    }
+}

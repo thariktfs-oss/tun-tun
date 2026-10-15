@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="staff-dashboard.css">
+
+    <script src="cript.js" defer></script>
+    <script src="staff-dashboard.js" defer></script>
+</head>
+<body class="staff-page">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                SwiftDrive<span> Rentals</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="staff-dashboard.html" class="active">Dashboard</a>
+                <a href="staff-vehicles.html">Vehicles</a>
+                <a href="admin-bookings.html">Bookings</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a href="login.html" class="btn btn-primary" id="logoutLink">
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- Welcome Section -->
+        <section class="dashboard-welcome">
+            <div>
+                <p class="eyebrow">STAFF WORKSPACE</p>
+                <h1>Staff Dashboard</h1>
+                <p>
+                    Welcome back! Manage rental bookings and check vehicle
+                    availability from one place.
+                </p>
+            </div>
+
+            <div class="dashboard-date">
+                <span>Today's Date</span>
+                <strong id="todayDate">Loading...</strong>
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon blue">▣</div>
+                <div>
+                    <p>Total Bookings</p>
+                    <h2 id="totalBookings">24</h2>
+                    <span>All rental bookings</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon orange">◷</div>
+                <div>
+                    <p>Pending Bookings</p>
+                    <h2 id="pendingBookings">6</h2>
+                    <span>Awaiting confirmation</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon green">✓</div>
+                <div>
+                    <p>Available Vehicles</p>
+                    <h2 id="availableVehicles">12</h2>
+                    <span>Ready for rental</span>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon purple">♧</div>
+                <div>
+                    <p>Total Customers</p>
+                    <h2 id="totalCustomers">38</h2>
+                    <span>Registered customers</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="dashboard-panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Quick Actions</h2>
+                    <p>Access common staff tasks.</p>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <a href="admin-bookings.html" class="action-card">
+                    <span class="action-icon">▤</span>
+                    <div>
+                        <h3>Manage Bookings</h3>
+                        <p>Review rental booking requests.</p>
+                    </div>
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="staff-vehicles.html" class="action-card">
+                    <span class="action-icon">🚗</span>
+                    <div>
+                        <h3>View Vehicles</h3>
+                        <p>Check vehicle information.</p>
+                    </div>
+                    <span class="action-arrow">→</span>
+                </a>
+
+                <a href="vehicles.html" class="action-card">
+                    <span class="action-icon">⌕</span>
+                    <div>
+                        <h3>Vehicle Catalogue</h3>
+                        <p>Browse the rental vehicles.</p>
+                    </div>
+                    <span class="action-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Recent Bookings -->
+        <section class="dashboard-panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Recent Bookings</h2>
+                    <p>Review the latest rental requests.</p>
+                </div>
+
+                <a href="admin-bookings.html" class="view-all">
+                    View All Bookings →
+                </a>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="bookings-table">
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Customer</th>
+                            <th>Vehicle</th>
+                            <th>Pickup Date</th>
+                            <th>Return Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookingTableBody">
+                        <tr>
+                            <td>SDR-1004</td>
+                            <td>Amal Perera</td>
+                            <td>Toyota Axio</td>
+                            <td>20 Oct 2026</td>
+                            <td>23 Oct 2026</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <button class="table-action" data-booking="SDR-1004">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>SDR-1003</td>
+                            <td>Sarah Fernando</td>
+                            <td>Suzuki Wagon R</td>
+                            <td>18 Oct 2026</td>
+                            <td>20 Oct 2026</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>
+                                <button class="table-action" data-booking="SDR-1003">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>SDR-1002</td>
+                            <td>Mohamed Rizwan</td>
+                            <td>Honda Vezel</td>
+                            <td>16 Oct 2026</td>
+                            <td>19 Oct 2026</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>
+                                <button class="table-action" data-booking="SDR-1002">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>SDR-1001</td>
+                            <td>Nimal Silva</td>
+                            <td>Toyota Aqua</td>
+                            <td>15 Oct 2026</td>
+                            <td>17 Oct 2026</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>
+                                <button class="table-action" data-booking="SDR-1001">
+                                    View
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="bookingMessage" class="booking-message" role="status"></p>
+        </section>
+
+        <!-- Vehicle Availability -->
+        <section class="dashboard-panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Vehicle Availability</h2>
+                    <p>Sample overview of the vehicle fleet.</p>
+                </div>
+
+                <a href="staff-vehicles.html" class="view-all">
+                    View Vehicles →
+                </a>
+            </div>
+
+            <div class="availability-grid">
+                <div class="availability-item">
+                    <div class="availability-heading">
+                        <span>Available</span>
+                        <strong>12 vehicles</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill available-fill"></div>
+                    </div>
+                </div>
+
+                <div class="availability-item">
+                    <div class="availability-heading">
+                        <span>Currently Rented</span>
+                        <strong>8 vehicles</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill rented-fill"></div>
+                    </div>
+                </div>
+
+                <div class="availability-item">
+                    <div class="availability-heading">
+                        <span>Under Maintenance</span>
+                        <strong>2 vehicles</strong>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill maintenance-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="logo footer-logo">
+                    SwiftDrive<span> Rentals</span>
+                </a>
+                <p>Your journey, our priority.</p>
+            </div>
+
+            <p class="copyright">
+                &copy; <span id="currentYear"></span> SwiftDrive Rentals.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

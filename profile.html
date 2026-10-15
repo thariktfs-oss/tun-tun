@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | SwiftDrive Rentals</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+
+    <script src="cript.js" defer></script>
+    <script src="profile.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">SwiftDrive Rentals</a>
+
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="my-bookings.html">My Bookings</a></li>
+                <li><a href="profile.html" class="active">My Profile</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="profile-page">
+        <div class="profile-container">
+
+            <div class="profile-heading">
+                <h1>My Profile</h1>
+                <p>View and manage your personal information.</p>
+            </div>
+
+            <section class="profile-card">
+                <div class="profile-top">
+                    <div class="profile-avatar" id="profileAvatar">C</div>
+
+                    <div class="profile-user">
+                        <h2 id="displayName">Customer Name</h2>
+                        <p id="displayEmail">customer@example.com</p>
+                        <span class="customer-badge">Customer Account</span>
+                    </div>
+                </div>
+
+                <div class="profile-divider"></div>
+
+                <form id="profileForm">
+                    <h3>Personal Information</h3>
+
+                    <div class="profile-form-grid">
+
+                        <div class="profile-field">
+                            <label for="fullName">Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                name="fullName"
+                                placeholder="Enter your full name"
+                                required
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="email">Email Address</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="address">Home Address</label>
+                            <input
+                                type="text"
+                                id="address"
+                                name="address"
+                                placeholder="Enter your address"
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="license">Driving Licence Number</label>
+                            <input
+                                type="text"
+                                id="license"
+                                name="license"
+                                placeholder="Enter your licence number"
+                            >
+                        </div>
+
+                        <div class="profile-field">
+                            <label for="city">City</label>
+                            <input
+                                type="text"
+                                id="city"
+                                name="city"
+                                placeholder="Enter your city"
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="profile-actions">
+                        <button type="reset" class="cancel-btn">
+                            Cancel
+                        </button>
+
+                        <button type="submit" class="save-btn">
+                            Save Changes
+                        </button>
+                    </div>
+
+                    <p id="profileMessage" class="profile-message"
+                       role="status"></p>
+                </form>
+            </section>
+
+            <section class="profile-shortcuts">
+                <a href="my-bookings.html" class="shortcut-card">
+                    <span class="shortcut-icon">🚗</span>
+                    <div>
+                        <h3>My Bookings</h3>
+                        <p>View your rental bookings.</p>
+                    </div>
+                    <span class="shortcut-arrow">→</span>
+                </a>
+
+                <a href="vehicles.html" class="shortcut-card">
+                    <span class="shortcut-icon">🔑</span>
+                    <div>
+                        <h3>Browse Vehicles</h3>
+                        <p>Find a vehicle for your next trip.</p>
+                    </div>
+                    <span class="shortcut-arrow">→</span>
+                </a>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            &copy; <span id="currentYear"></span>
+            SwiftDrive Rentals. All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
